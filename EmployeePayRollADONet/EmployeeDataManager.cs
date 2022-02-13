@@ -8,8 +8,6 @@ namespace EmployeePayRollADONet
 {
     public class EmployeeDataManager
     {
-        internal int c;
-
         public int id { get; set; }
         public string name { get; set; }
         public double salary { get; set; }
@@ -22,10 +20,5 @@ namespace EmployeePayRollADONet
         public double IncomeTax { get; set; }
         public double TaxablePay { get; set; }
         public double NetPay { get; set; }
-        public int CompanyID { get; internal set; }
-        public string CompanyName { get; internal set; }
-        public int EmployeeID { get; set; }
-        public string EmployeeName { get; set; }
-        public int BasicPay { get; set; }
     }
 }

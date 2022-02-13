@@ -6,10 +6,7 @@ namespace EmployeePayRollADONet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("------------Welcome TO Employee PayRoll Services Using ADO.NET----------");
-            EmployeeRepository employeeRepository = new EmployeeRepository();
-            employeeRepository.GetDataFromSql();
-
+            Console.WriteLine("------------Welcome TO Employee PayRoll Services Using ADO.NET");
         }
     }
 }
