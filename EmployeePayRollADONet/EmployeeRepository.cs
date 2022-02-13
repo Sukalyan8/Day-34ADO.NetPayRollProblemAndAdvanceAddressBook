@@ -56,7 +56,7 @@ namespace EmployeePayRollADONet
         {
             //Open Connection
             sqlConnection.Open();
-            string query = "update employee_payroll set basicPay=3670000 where name= 'suresh'";
+            string query = "update employee_payroll set basicPay=3670000 where name= 'rakshi'";
             //Pass query to TSql
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             int result = sqlCommand.ExecuteNonQuery();
