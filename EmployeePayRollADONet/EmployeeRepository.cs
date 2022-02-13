@@ -72,6 +72,5 @@ namespace EmployeePayRollADONet
             sqlConnection.Close();
             GetDataFromSql();
         }
-
     }
 }
