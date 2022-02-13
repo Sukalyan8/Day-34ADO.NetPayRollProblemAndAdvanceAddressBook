@@ -43,7 +43,7 @@ namespace EmployeePayRollADONet
                     employeeDataManager.startDate = Convert.ToDateTime(sqlDataReader["startDate"]);
 
                     //Display Data
-                    Console.WriteLine("-------------------Dispalying Table  Details----------");
+                    Console.WriteLine("-------------------Displaying Table  Details----------");
                     Console.WriteLine("\nEmployee id: {0} \t  Name: {1} \nSalary: {2} \t Deduction: {3} \t Income Tax: {4} \t Taxable Pay: {5} \t NetPay: {6} \nGender: {7} \t PhoneNumber: {8} \t Department: {9} \t Address: {10}", employeeDataManager.id, employeeDataManager.name, employeeDataManager.salary, employeeDataManager.Deduction, employeeDataManager.IncomeTax, employeeDataManager.TaxablePay, employeeDataManager.NetPay, employeeDataManager.Gender, employeeDataManager.EmployeePhoneNumber, employeeDataManager.EmployeeDepartment, employeeDataManager.Address);
                 }
                 //Close sqlDataReader Connection
@@ -51,6 +51,26 @@ namespace EmployeePayRollADONet
             }
             //Close Connection
             sqlConnection.Close();
+        }
+        public void UpdateSalary()
+        {
+            //Open Connection
+            sqlConnection.Open();
+            string query = "update employee_payroll set basicPay=3670000 where name= 'Rakshi'";
+            //Pass query to TSql
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            int result = sqlCommand.ExecuteNonQuery();
+            if (result != 0)
+            {
+                Console.WriteLine("Updated!");
+            }
+            else
+            {
+                Console.WriteLine("Not Updated!");
+            }
+            //Close Connection
+            sqlConnection.Close();
+            GetDataFromSql();
         }
 
     }
